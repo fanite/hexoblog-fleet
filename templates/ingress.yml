@@ -24,4 +24,4 @@ spec:
             port: 
               number: 80
   tls:
-  - secretName: alist-tls
+  - secretName: hexo-blog-tls

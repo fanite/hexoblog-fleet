@@ -2,14 +2,14 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: blog.fanite.com
+  name: hexo-blog-tls
   namespace: website
   labels:
     app.kubernetes.io/name: hexo-blog-certificate
     app.kubernetes.io/component: hexo-blog
     app.kubernetes.io/created-by: fanite
 spec:
-  secretName: blog.fanite.com
+  secretName: hexo-blog-tls
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
