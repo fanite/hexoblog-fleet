@@ -1,0 +1,27 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hexo-blog
+  namespace: website
+  labels:
+    app.kubernetes.io/name: hexo-blog-ingress
+    app.kubernetes.io/component: hexo-blog
+    app.kubernetes.io/created-by: fanite
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-production
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+spec:
+  rules:
+  - host: blog.fanite.com
+    http:
+      paths:
+      - pathType: ImplementationSpecific
+        backend:
+          service:
+            name: hexo-blog
+            port: 
+              number: 80
+  tls:
+  - secretName: alist-tls

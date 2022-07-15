@@ -1,0 +1,31 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hexo-blog
+  namespace: website
+  labels:
+    app.kubernetes.io/name: hexo-blog-deployment
+    app.kubernetes.io/component: hexo-blog
+    app.kubernetes.io/created-by: fanite
+spec:
+  selector:
+    matchLabels:
+      app: hexo-blog
+  template:
+    metadata:
+      labels:
+        app: hexo-blog
+        app.kubernetes.io/name: hexo-blog-pod
+        app.kubernetes.io/component: hexo-blog
+        app.kubernetes.io/created-by: fanite
+    spec:
+      containers:
+      - name: hexo-blog
+        image: fanite/hexoblog:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+        ports:
+        - containerPort: 80
