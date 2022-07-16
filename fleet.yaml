@@ -4,3 +4,4 @@
 # but do not specify a namespace.  In this example no resources
 # are configured with a namespace so this default will apply
 namespace: website
+version: v0.0.1
