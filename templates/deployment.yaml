@@ -27,6 +27,9 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "300m"
+        env:
+        - name: TZ
+          value: Asia/Shanghai
         ports:
         - containerPort: 80
       imagePullSecrets:
