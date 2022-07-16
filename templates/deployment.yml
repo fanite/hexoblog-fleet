@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: hexo-blog
-        image: fanite/hexoblog:latest
+        image: fanite/hexoblog:v0.0.1-beta16
         resources:
           limits:
             memory: "128Mi"
