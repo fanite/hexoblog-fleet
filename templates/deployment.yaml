@@ -8,6 +8,7 @@ metadata:
     app.kubernetes.io/component: hexo-blog
     app.kubernetes.io/created-by: fanite
 spec:
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: hexo-blog
