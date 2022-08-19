@@ -2,11 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hexo-blog
-  namespace: website
   labels:
-    app.kubernetes.io/name: hexo-blog-service
+    app.kubernetes.io/name: hexo-blog
     app.kubernetes.io/component: hexo-blog
-    app.kubernetes.io/created-by: fanite
 spec:
   selector:
     app: hexo-blog

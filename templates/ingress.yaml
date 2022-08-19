@@ -2,16 +2,15 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hexo-blog
-  namespace: website
   labels:
-    app.kubernetes.io/name: hexo-blog-ingress
+    app.kubernetes.io/name: hexo-blog
     app.kubernetes.io/component: hexo-blog
-    app.kubernetes.io/created-by: fanite
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
-    kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+    traefik.ingress.kubernetes.io/router.middlewares: kube-system-redirect-https@kubernetescrd
 spec:
+  ingressClassName: traefik
   rules:
   - host: blog.fanite.com
     http:
