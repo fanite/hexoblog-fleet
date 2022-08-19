@@ -23,3 +23,5 @@ spec:
               number: 80
   tls:
   - secretName: hexo-blog-tls
+    hosts:
+      - blog.fanite.com
