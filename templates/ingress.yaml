@@ -12,7 +12,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: blog.fanite.com
+  - host: blog.ifei.me
     http:
       paths:
       - pathType: ImplementationSpecific
@@ -24,4 +24,4 @@ spec:
   tls:
   - secretName: hexo-blog-tls
     hosts:
-      - blog.fanite.com
+      - blog.ifei.me

@@ -1,6 +1,6 @@
 # Manifests Example
 
-This example will deploy the [hexo blog](https://blog.fanite.com/) application.
+This example will deploy the [hexo blog](https://blog.ifei.me/) application.
 The app will be deployed into the `website` namespace.
 
 ```yaml
