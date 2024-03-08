@@ -12,7 +12,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: blog.ifei.me
+  - host: blog.pipit.top
     http:
       paths:
       - pathType: ImplementationSpecific
@@ -24,4 +24,4 @@ spec:
   tls:
   - secretName: hexo-blog-tls
     hosts:
-      - blog.ifei.me
+      - blog.pipit.top
